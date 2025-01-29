@@ -1,0 +1,257 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Our Services - Astha Therapy Center{% endblock %}
+
+{% block content %}
+<!-- Working Hours Section -->
+<section class="working-hours-section py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="working-hours-content bg-white rounded-4 p-5">
+                    <span class="text-primary fw-medium mb-2 d-block">Working Hours</span>
+                    <h2 class="fw-bold mb-4">Book Appointment According to<br>the Time Table</h2>
+                    
+                    <div class="time-table">
+                        <div class="time-slot d-flex justify-content-between align-items-center">
+                            <span class="day">Mon</span>
+                            <span class="time">7AM - 11PM</span>
+                            <a href="#appointmentForm" class="book-now">Book Now</a>
+                        </div>
+                        <div class="time-slot d-flex justify-content-between align-items-center">
+                            <span class="day">Tue</span>
+                            <span class="time">7AM - 11PM</span>
+                            <a href="#appointmentForm" class="book-now">Book Now</a>
+                        </div>
+                        <div class="time-slot d-flex justify-content-between align-items-center">
+                            <span class="day">Wed</span>
+                            <span class="time">7AM - 11PM</span>
+                            <a href="#appointmentForm" class="book-now">Book Now</a>
+                        </div>
+                        <div class="time-slot d-flex justify-content-between align-items-center">
+                            <span class="day">Thu</span>
+                            <span class="time">7AM - 11PM</span>
+                            <a href="#appointmentForm" class="book-now">Book Now</a>
+                        </div>
+                        <div class="time-slot d-flex justify-content-between align-items-center">
+                            <span class="day">Fri</span>
+                            <span class="time">7AM - 11PM</span>
+                            <a href="#appointmentForm" class="book-now">Book Now</a>
+                        </div>
+                        <div class="time-slot d-flex justify-content-between align-items-center">
+                            <span class="day">Sat</span>
+                            <span class="time">7AM - 11PM</span>
+                            <a href="#appointmentForm" class="book-now">Book Now</a>
+                        </div>
+                        <div class="time-slot d-flex justify-content-between align-items-center">
+                            <span class="day">Sun</span>
+                            <span class="time">7AM - 11PM</span>
+                            <a href="#appointmentForm" class="book-now">Book Now</a>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <p class="text-muted mb-3">Time's not Flexible</p>
+                        <a href="#appointmentForm" class="btn btn-primary px-4">Make an Appointment</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="appointment-image">
+                    <img src="https://img.freepik.com/free-photo/young-female-doctor-white-coat-with-stethoscope-holding-clipboard-with-blank-pages-pen-looking-confident_141793-45985.jpg" alt="Doctor" class="img-fluid rounded-4">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Appointment Form Section -->
+<section class="appointment-form-section py-5">
+    <div class="container">
+        <div class="row g-0 bg-white rounded-4 shadow-lg overflow-hidden">
+            <div class="col-lg-6">
+                <img src="{% static 'images/appointment-form.png' %}" alt="Medical checkup" class="img-fluid h-100 object-fit-cover">
+            </div>
+            <div class="col-lg-6">
+                <div class="appointment-form p-4 p-lg-5">
+                    <span class="text-primary fw-medium mb-3 d-block">Appointment</span>
+                    <h2 class="display-6 fw-bold mb-4">Book Your Appointment</h2>
+                    
+                    <form id="bookingForm">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <label class="form-label">Name*</label>
+                            <input type="text" name="name" class="form-control" placeholder="First Name" required>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Number*</label>
+                                <input type="tel" name="phone" class="form-control" placeholder="+1 (847) 546 768" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Email*</label>
+                                <input type="email" name="email" class="form-control" placeholder="email@example.com" required>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Date*</label>
+                                <input type="date" name="date" class="form-control" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Time*</label>
+                                <input type="time" name="time" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label">Message</label>
+                            <textarea name="message" class="form-control" rows="4" placeholder="Hey there!"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <span class="button-text">Book an Appointment</span>
+                            <div class="spinner-border spinner-border-sm d-none" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Success Modal -->
+<div class="modal fade" id="successModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body text-center py-4">
+                <i class="fas fa-check-circle text-success mb-3" style="font-size: 3rem;"></i>
+                <h4>Appointment Booked!</h4>
+                <p>We'll send you a confirmation email shortly.</p>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .time-table {
+        border: 1px solid rgba(65, 105, 225, 0.1);
+        border-radius: 12px;
+        padding: 1rem;
+        margin: 2rem 0;
+        background-color: #FFFFFF;
+    }
+
+    .time-slot {
+        padding: 1rem;
+        border-bottom: 1px solid rgba(65, 105, 225, 0.1);
+    }
+
+    .time-slot:last-child {
+        border-bottom: none;
+    }
+
+    .time-slot .day {
+        font-weight: 600;
+        color: var(--text-color);
+    }
+
+    .time-slot .time {
+        color: #666;
+    }
+
+    .time-slot .book-now {
+        color: var(--primary-color);
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 14px;
+    }
+
+    .time-slot .book-now:hover {
+        text-decoration: underline;
+    }
+
+    .appointment-form {
+        background-color: #FFFFFF;
+    }
+
+    .appointment-form input,
+    .appointment-form textarea {
+        border: 1px solid rgba(65, 105, 225, 0.1);
+        padding: 0.75rem 1rem;
+        font-size: 14px;
+        transition: all 0.3s ease;
+    }
+
+    .appointment-form input:focus,
+    .appointment-form textarea:focus {
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 0.2rem rgba(65, 105, 225, 0.25);
+    }
+
+    .appointment-form label {
+        font-weight: 500;
+        color: var(--text-color);
+        font-size: 14px;
+    }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('bookingForm');
+    
+    form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const buttonText = submitBtn.querySelector('.button-text');
+        const spinner = submitBtn.querySelector('.spinner-border');
+        
+        // Show loading state
+        buttonText.classList.add('d-none');
+        spinner.classList.remove('d-none');
+        submitBtn.disabled = true;
+
+        try {
+            const formData = new FormData(form);
+            const data = {};
+            formData.forEach((value, key) => {
+                if (key !== 'csrfmiddlewaretoken') {
+                    data[key] = value;
+                }
+            });
+
+            const response = await fetch('/book-appointment/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': form.querySelector('[name=csrfmiddlewaretoken]').value
+                },
+                body: JSON.stringify(data)
+            });
+
+            const result = await response.json();
+            
+            if (result.status === 'success') {
+                const modal = new bootstrap.Modal(document.getElementById('successModal'));
+                modal.show();
+                form.reset();
+            } else {
+                alert('Error: ' + result.message);
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            alert('Error submitting form. Please try again.');
+        } finally {
+            // Reset button state
+            buttonText.classList.remove('d-none');
+            spinner.classList.add('d-none');
+            submitBtn.disabled = false;
+        }
+    });
+});
+</script>
+
+{% endblock %}

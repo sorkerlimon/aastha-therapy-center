@@ -1,0 +1,176 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home - Astha Therapy Center{% endblock %}
+
+{% block extra_css %}
+<style>
+    .hero-wrapper {
+        position: relative;
+        background: url("{% static 'images/bg-light-2.png' %}") no-repeat;
+        background-size: cover;
+        background-position: center;
+        min-height: 80vh;
+        background-color: #F8FAFF;
+    }
+    
+    .hero-content {
+        padding: 4rem 0;
+        position: relative;
+        z-index: 2;
+    }
+
+    .hero-image {
+        position: relative;
+        z-index: 2;
+    }
+
+    .hero-image img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    @media (max-width: 991.98px) {
+        .hero-wrapper {
+            padding: 2rem 0;
+        }
+        .hero-content {
+            text-align: center;
+        }
+        .hero-image {
+            margin-top: 2rem;
+        }
+    }
+
+    .service-card {
+        background-color: #F8FAFF;
+        border-radius: 16px;
+        padding: 2rem;
+        height: 100%;
+        transition: all 0.3s ease;
+    }
+
+    .service-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(65, 105, 225, 0.1);
+    }
+
+    .service-icon {
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 12px;
+        background-color: var(--primary-color);
+        color: white;
+        margin-bottom: 1.5rem;
+    }
+
+    .service-card h3 {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: var(--text-color);
+    }
+
+    .service-card p {
+        color: #666;
+        margin-bottom: 1.5rem;
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .feature-card {
+        background-color: #F8FAFF;
+        transition: all 0.3s ease;
+        border: 1px solid rgba(65, 105, 225, 0.1);
+    }
+
+    .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(65, 105, 225, 0.1);
+    }
+
+    .feature-icon {
+        font-size: 24px;
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 12px;
+        background-color: white;
+        box-shadow: 0 4px 12px rgba(65, 105, 225, 0.1);
+    }
+
+    .feature-card h3 {
+        color: var(--text-color);
+        font-weight: 600;
+    }
+
+    .feature-card p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<div class="hero-wrapper">
+    <div class="hero-content">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="hero-title mb-4">We Listen, We Care,<br>We Heal.</h1>
+                    <p class="lead text-muted mb-5">Dedicated to providing exceptional therapeutic care with a personalized approach to help you achieve optimal health and wellness.</p>
+                    <div class="d-flex gap-3">
+                        <a href="{% url "appointment" %}" class="btn btn-primary">Appointment</a>
+                        <a href="" class="btn btn-outline-primary">Contact Us</a>
+                    </div>
+                    <div class="row mt-5">
+                        <div class="col-6">
+                            <div class="stats-number">10+</div>
+                            <p class="mb-0">Best Specialists</p>
+                        </div>
+                        <div class="col-6">
+                            <div class="stats-number">20K</div>
+                            <p class="mb-0">Patients healed</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image">
+                        <img src="{% static 'images/banner-image.png' %}" alt="Doctor" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include 'features.html' %}
+
+ <!-- Services Section -->
+{% include 'services.html' %}
+
+
+<!-- Appointments Section -->
+{% include 'appointments.html' %} 
+
+<!-- SVG Icons -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="graduation-cap" viewBox="0 0 16 16">
+        <path d="M8 0l8 4-8 4L0 4l8-4z"/>
+        <path d="M8 8.94L14.13 5.2l.87.43v4.37l-7 3.5-7-3.5V5.64l.87-.43L8 8.94z"/>
+    </symbol>
+    <symbol id="first-aid" viewBox="0 0 16 16">
+        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+    </symbol>
+    <symbol id="clock" viewBox="0 0 16 16">
+        <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+    </symbol>
+</svg>
+{% endblock %}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; }
+        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+        .header { background: #4169E1; color: white; padding: 20px; text-align: center; }
+        .content { padding: 20px; }
+        .details { margin: 20px 0; }
+        .detail-row { margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>New Appointment Request</h2>
+        </div>
+        <div class="content">
+            <p>A new appointment has been requested with the following details:</p>
+            
+            <div class="details">
+                <div class="detail-row">
+                    <strong>Name:</strong> {{ appointment.name }}
+                </div>
+                <div class="detail-row">
+                    <strong>Email:</strong> {{ appointment.email }}
+                </div>
+                <div class="detail-row">
+                    <strong>Phone:</strong> {{ appointment.phone }}
+                </div>
+                <div class="detail-row">
+                    <strong>Date:</strong> {{ appointment.date }}
+                </div>
+                <div class="detail-row">
+                    <strong>Time:</strong> {{ appointment.time }}
+                </div>
+                {% if appointment.message %}
+                <div class="detail-row">
+                    <strong>Message:</strong><br>
+                    {{ appointment.message }}
+                </div>
+                {% endif %}
+            </div>
+            
+            <p>Please review and confirm this appointment.</p>
+        </div>
+    </div>
+</body>
+</html>

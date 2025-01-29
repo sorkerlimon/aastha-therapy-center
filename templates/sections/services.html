@@ -1,0 +1,175 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Blog - Medicare{% endblock %}
+
+{% block content %}
+<!-- Services Section -->
+<section class="services-section py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <span class="text-primary fw-medium mb-3 d-block">Services</span>
+            <h2 class="display-6 fw-bold">Our Care Offerings</h2>
+        </div>
+        
+        <div class="row g-4">
+            <!-- Service 1 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-pills"></i>
+                    </div>
+                    <h3>Pharmacy Service</h3>
+                    <p>Lorem ipsum dolor sit amet consect etur. Vestibulum elit eu vulputate tristique enim.</p>
+                    <div class="service-actions">
+                        <a href="#" class="btn btn-primary btn-sm">Acquire Service</a>
+                        <a href="#" class="btn-learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3>Medical Specialist</h3>
+                    <p>Lorem ipsum dolor sit amet consect etur. Vestibulum elit eu vulputate tristique enim.</p>
+                    <div class="service-actions">
+                        <a href="#" class="btn btn-primary btn-sm">Acquire Service</a>
+                        <a href="#" class="btn-learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-stethoscope"></i>
+                    </div>
+                    <h3>Medical Checkup</h3>
+                    <p>Lorem ipsum dolor sit amet consect etur. Vestibulum elit eu vulputate tristique enim.</p>
+                    <div class="service-actions">
+                        <a href="#" class="btn btn-primary btn-sm">Acquire Service</a>
+                        <a href="#" class="btn-learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Health Consultation</h3>
+                    <p>Lorem ipsum dolor sit amet consect etur. Vestibulum elit eu vulputate tristique enim.</p>
+                    <div class="service-actions">
+                        <a href="#" class="btn btn-primary btn-sm">Acquire Service</a>
+                        <a href="#" class="btn-learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 5 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-ambulance"></i>
+                    </div>
+                    <h3>Ambulance Service</h3>
+                    <p>Lorem ipsum dolor sit amet consect etur. Vestibulum elit eu vulputate tristique enim.</p>
+                    <div class="service-actions">
+                        <a href="#" class="btn btn-primary btn-sm">Acquire Service</a>
+                        <a href="#" class="btn-learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 6 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Mental Guidance</h3>
+                    <p>Lorem ipsum dolor sit amet consect etur. Vestibulum elit eu vulputate tristique enim.</p>
+                    <div class="service-actions">
+                        <a href="#" class="btn btn-primary btn-sm">Acquire Service</a>
+                        <a href="#" class="btn-learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .service-card {
+        background-color: #F8FAFF;
+        border-radius: 16px;
+        padding: 2rem;
+        height: 100%;
+        transition: all 0.3s ease;
+    }
+
+    .service-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(65, 105, 225, 0.1);
+    }
+
+    .service-icon {
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 12px;
+        background-color: var(--primary-color);
+        color: white;
+        margin-bottom: 1.5rem;
+    }
+
+    .service-card h3 {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: var(--text-color);
+    }
+
+    .service-card p {
+        color: #666;
+        margin-bottom: 1.5rem;
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .service-actions {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .btn-learn-more {
+        color: var(--primary-color);
+        text-decoration: none;
+        font-weight: 500;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .btn-learn-more:hover {
+        color: #3451b2;
+    }
+
+    .btn-learn-more i {
+        transition: transform 0.3s ease;
+    }
+
+    .btn-learn-more:hover i {
+        transform: translateX(5px);
+    }
+</style>
+{% endblock %}

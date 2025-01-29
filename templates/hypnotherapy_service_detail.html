@@ -1,0 +1,121 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Hypnotherapy Service - Astha Therapy Center{% endblock %}
+
+{% block content %}
+<!-- Service Detail Header -->
+<section class="service-header py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h1 class="display-4 fw-bold mb-4">Hypnotherapy Service</h1>
+                <p class="lead text-muted mb-4">Experience the transformative power of hypnotherapy for stress relief, anxiety management, and personal growth.</p>
+                <a href="#appointment" class="btn btn-primary rounded-pill px-4 py-2">Book Appointment</a>
+            </div>
+            <div class="col-lg-6">
+                <img src="{% static 'images/blog-4.png' %}" alt="Hypnotherapy Service" class="img-fluid rounded-4 shadow-lg">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Service Details -->
+<section class="service-details py-5">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-8">
+                <!-- Main Content -->
+                <div class="content-block mb-5">
+                    <h2 class="h3 mb-4">What is Hypnotherapy?</h2>
+                    <p>Hypnotherapy is a therapeutic technique that uses hypnosis to create a state of focused attention and increased suggestibility. During this state, a trained therapist can help you work on specific issues or make positive changes in your life.</p>
+                </div>
+
+                <div class="content-block mb-5">
+                    <h2 class="h3 mb-4">Benefits of Hypnotherapy</h2>
+                    <ul class="list-unstyled">
+                        <li class="mb-3">
+                            <i class="fas fa-check-circle text-primary me-2"></i>
+                            Stress and Anxiety Reduction
+                        </li>
+                        <li class="mb-3">
+                            <i class="fas fa-check-circle text-primary me-2"></i>
+                            Improved Sleep Quality
+                        </li>
+                        <li class="mb-3">
+                            <i class="fas fa-check-circle text-primary me-2"></i>
+                            Breaking Unwanted Habits
+                        </li>
+                        <li class="mb-3">
+                            <i class="fas fa-check-circle text-primary me-2"></i>
+                            Pain Management
+                        </li>
+                        <li class="mb-3">
+                            <i class="fas fa-check-circle text-primary me-2"></i>
+                            Enhanced Self-Confidence
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="content-block">
+                    <h2 class="h3 mb-4">What to Expect</h2>
+                    <p>During your first session, we'll discuss your goals and concerns. The hypnotherapy process is gentle and you'll remain aware throughout. Most people describe it as deeply relaxing, similar to meditation.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <!-- Sidebar -->
+                <div class="service-sidebar rounded-4 bg-light p-4">
+                    <h3 class="h4 mb-4">Service Information</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-3">
+                            <strong>Duration:</strong>
+                            <span class="float-end">60 minutes</span>
+                        </li>
+                        <li class="mb-3">
+                            <strong>Price:</strong>
+                            <span class="float-end">$120/session</span>
+                        </li>
+                        <li class="mb-3">
+                            <strong>Location:</strong>
+                            <span class="float-end">Main Clinic</span>
+                        </li>
+                    </ul>
+                    <a href="#appointment" class="btn btn-primary w-100 rounded-pill">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% include "sections/appointments.html" %}
+<style>
+    .service-header {
+        background: linear-gradient(180deg, #F8FAFF 0%, #FFFFFF 100%);
+    }
+
+    .service-details .content-block {
+        color: #444;
+    }
+
+    .service-sidebar {
+        position: sticky;
+        top: 100px;
+    }
+
+    .list-unstyled li {
+        color: #444;
+    }
+
+    .fas.fa-check-circle {
+        color: var(--primary-color);
+    }
+
+    @media (max-width: 991.98px) {
+        .service-sidebar {
+            position: static;
+            margin-top: 2rem;
+        }
+    }
+</style>
+{% endblock %}

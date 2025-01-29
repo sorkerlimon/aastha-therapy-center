@@ -1,0 +1,268 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About Us - Astha Therapy Center{% endblock %}
+
+{% block content %}
+<!-- About Header -->
+<section class="about-header py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <span class="text-primary fw-medium mb-3 d-block">Welcome to Astha Therapy Center</span>
+                <h1 class="display-4 fw-bold mb-4">Your Journey to Wellness Begins Here</h1>
+                <p class="lead text-muted mb-4">With over 15 years of experience, we've helped thousands of individuals find their path to mental and emotional well-being through compassionate care and evidence-based therapeutic approaches.</p>
+                <div class="d-flex gap-4 mb-4">
+                    <div class="stat-item">
+                        <h3 class="h2 fw-bold text-primary mb-0">15+</h3>
+                        <p class="small text-muted mb-0">Years Experience</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3 class="h2 fw-bold text-primary mb-0">5000+</h3>
+                        <p class="small text-muted mb-0">Happy Clients</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3 class="h2 fw-bold text-primary mb-0">98%</h3>
+                        <p class="small text-muted mb-0">Success Rate</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <img src="{% static 'images/blog-4.png' %}" alt="About Us" class="img-fluid rounded-4 shadow-lg">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Our Approach Section -->
+<section class="approach-section py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <span class="text-primary fw-medium mb-3 d-block">Our Therapeutic Approach</span>
+            <h2 class="display-6 fw-bold mb-4">Comprehensive Care for Your Well-being</h2>
+            <p class="text-muted mx-auto" style="max-width: 700px;">We believe in a holistic approach to therapy, addressing not just symptoms but the whole person. Our methods combine traditional therapeutic practices with modern techniques for optimal results.</p>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-lg-4">
+                <div class="approach-card h-100 p-4 bg-white rounded-4 shadow-sm">
+                    <div class="icon-wrapper mb-4">
+                        <i class="fas fa-brain text-primary fa-2x"></i>
+                    </div>
+                    <h3 class="h4 mb-3">Evidence-Based Treatment</h3>
+                    <p class="text-muted mb-0">Our therapeutic methods are grounded in scientific research and proven clinical practices, ensuring the most effective treatment for our clients.</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="approach-card h-100 p-4 bg-white rounded-4 shadow-sm">
+                    <div class="icon-wrapper mb-4">
+                        <i class="fas fa-user-friends text-primary fa-2x"></i>
+                    </div>
+                    <h3 class="h4 mb-3">Personalized Care</h3>
+                    <p class="text-muted mb-0">We develop individualized treatment plans tailored to your specific needs, goals, and circumstances.</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="approach-card h-100 p-4 bg-white rounded-4 shadow-sm">
+                    <div class="icon-wrapper mb-4">
+                        <i class="fas fa-hand-holding-heart text-primary fa-2x"></i>
+                    </div>
+                    <h3 class="h4 mb-3">Supportive Environment</h3>
+                    <p class="text-muted mb-0">Our center provides a safe, confidential, and nurturing space where you can explore your thoughts and feelings freely.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Team Members Section -->
+<section class="team-section py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <span class="text-primary fw-medium mb-3 d-block">Our Expert Team</span>
+            <h2 class="display-6 fw-bold">Meet Our Licensed Therapists</h2>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6">
+                <div class="team-member text-center">
+                    <div class="member-img mb-4">
+                        <img src="{% static 'images/doctor-1.png' %}" alt="Dr. Emily Carter" class="img-fluid rounded-4">
+                    </div>
+                    <h3 class="h5 mb-1">Dr. Emily Carter</h3>
+                    <p class="text-muted small mb-2">Clinical Psychologist</p>
+                    <p class="text-muted small">Specializes in Anxiety & Depression</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="team-member text-center">
+                    <div class="member-img mb-4">
+                        <img src="{% static 'images/doctor-1.png' %}" alt="Dr. Christopher Lee" class="img-fluid rounded-4">
+                    </div>
+                    <h3 class="h5 mb-1">Dr. Christopher Lee</h3>
+                    <p class="text-muted small mb-2">Family Therapist</p>
+                    <p class="text-muted small">Relationship Counseling Expert</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="team-member text-center">
+                    <div class="member-img mb-4">
+                        <img src="{% static 'images/doctor-1.png' %}" alt="Dr. Sarah Johnson" class="img-fluid rounded-4">
+                    </div>
+                    <h3 class="h5 mb-1">Dr. Sarah Johnson</h3>
+                    <p class="text-muted small mb-2">Cognitive Behavioral Therapist</p>
+                    <p class="text-muted small">Trauma Recovery Specialist</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="team-member text-center">
+                    <div class="member-img mb-4">
+                        <img src="{% static 'images/doctor-1.png' %}" alt="Dr. Michael Chen" class="img-fluid rounded-4">
+                    </div>
+                    <h3 class="h5 mb-1">Dr. Michael Chen</h3>
+                    <p class="text-muted small mb-2">Child Psychologist</p>
+                    <p class="text-muted small">Developmental Therapy Expert</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Values Section -->
+<section class="values-section py-5 bg-light">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-4">
+                <div class="values-card h-100 p-4 rounded-4 bg-white shadow-sm">
+                    <div class="icon-wrapper mb-4">
+                        <i class="fas fa-heart text-primary fa-2x"></i>
+                    </div>
+                    <h3 class="h4 mb-3">Our Mission</h3>
+                    <p class="text-muted mb-0">To provide compassionate, effective therapeutic care that empowers individuals to overcome challenges and achieve emotional well-being. We're committed to creating a supportive environment where healing and personal growth flourish.</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="values-card h-100 p-4 rounded-4 bg-white shadow-sm">
+                    <div class="icon-wrapper mb-4">
+                        <i class="fas fa-eye text-primary fa-2x"></i>
+                    </div>
+                    <h3 class="h4 mb-3">Our Vision</h3>
+                    <p class="text-muted mb-0">To be the leading therapeutic center known for transforming lives through innovative, evidence-based treatments and unwavering commitment to client success. We aspire to make quality mental healthcare accessible to all.</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="values-card h-100 p-4 rounded-4 bg-white shadow-sm">
+                    <div class="icon-wrapper mb-4">
+                        <i class="fas fa-star text-primary fa-2x"></i>
+                    </div>
+                    <h3 class="h4 mb-3">Our Values</h3>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Compassionate Care</li>
+                        <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Professional Excellence</li>
+                        <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Client Confidentiality</li>
+                        <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Continuous Growth</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Cultural Sensitivity</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Certifications Section -->
+<section class="certifications-section py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <span class="text-primary fw-medium mb-3 d-block">Our Credentials</span>
+            <h2 class="display-6 fw-bold">Professional Certifications</h2>
+        </div>
+        <div class="row justify-content-center text-center g-4">
+            <div class="col-lg-3 col-md-4 col-6">
+                <div class="certification-item">
+                    <i class="fas fa-certificate text-primary fa-3x mb-3"></i>
+                    <h4 class="h6">American Psychological Association</h4>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+                <div class="certification-item">
+                    <i class="fas fa-award text-primary fa-3x mb-3"></i>
+                    <h4 class="h6">National Board of Certified Counselors</h4>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+                <div class="certification-item">
+                    <i class="fas fa-medal text-primary fa-3x mb-3"></i>
+                    <h4 class="h6">International Association of Counselors</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .about-header {
+        background: linear-gradient(180deg, #F8FAFF 0%, #FFFFFF 100%);
+    }
+
+    .stat-item {
+        padding: 1rem;
+        background: rgba(65, 105, 225, 0.05);
+        border-radius: 12px;
+        text-align: center;
+    }
+
+    .team-member, .approach-card, .values-card {
+        background: #fff;
+        padding: 1.5rem;
+        border-radius: 16px;
+        transition: all 0.3s ease;
+    }
+
+    .team-member:hover, .approach-card:hover, .values-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .member-img {
+        position: relative;
+        overflow: hidden;
+        border-radius: 12px;
+    }
+
+    .member-img img {
+        transition: transform 0.3s ease;
+    }
+
+    .team-member:hover .member-img img {
+        transform: scale(1.05);
+    }
+
+    .icon-wrapper {
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(65, 105, 225, 0.1);
+        border-radius: 50%;
+    }
+
+    .certification-item {
+        padding: 1.5rem;
+        background: #fff;
+        border-radius: 16px;
+        transition: all 0.3s ease;
+    }
+
+    .certification-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (max-width: 768px) {
+        .stat-item {
+            padding: 0.75rem;
+        }
+    }
+</style>
+{% endblock %}
